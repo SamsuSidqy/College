@@ -1,0 +1,58 @@
+program PersegiPanjang;
+uses crt;
+var
+ NomorMenu:Integer;
+ panjang,lebar,luas,keliling:Integer;
+ diagonal:Real;
+Begin
+clrscr;
+    //Pilihan Menu
+    writeln('=== Pilihan Menu ===');
+    writeln('1. Luas');
+    writeln('2. Keliling');
+    writeln('3. Diagonal');
+    writeln('4. Keluar Progrm');
+    writeln('====================');
+    Write('Pilih Menu 1-4: ');
+    readln(NomorMenu);
+    writeln('====================');
+    case NomorMenu of
+    1:Begin
+    clrscr;
+        Writeln (' 1. Hitung Luas ');
+        Writeln('==================');
+        write('Panjang: ');
+        readln(panjang);
+        write('Lebar: ');
+        readln(lebar);
+        luas:=(panjang*lebar);
+        writeln ('Luas: ',luas);
+        readln();
+    end;
+    2:Begin
+    clrscr;
+        Writeln (' 1. Hitung Keliling');
+        Writeln('==================');
+        write('Panjang: ');
+        readln(panjang);
+        write('Lebar: ');
+        readln(lebar);
+        keliling:=(2*panjang)+(2*lebar);
+        writeln ('Keliling: ',keliling);
+        readln();
+    end;
+    3:Begin
+    clrscr;
+        Writeln (' 1. Hitung Panjang Diagonal');
+        Writeln('==================');
+        write('Panjang: ');
+        readln(panjang);
+        write('Lebar: ');
+        readln(lebar);
+         diagonal:= sqrt(panjang*panjang)+(lebar*lebar);
+        writeln ('Diagonal: ',diagonal);
+        readln();
+    end;
+    4 : writeln ('Keluar Program ');
+end;
+End.

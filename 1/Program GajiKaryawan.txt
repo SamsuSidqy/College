@@ -1,0 +1,43 @@
+Program GajiKaryawan;
+uses crt;
+var
+pend:String;
+gaj,tunj:Longint;
+gol:Char;
+begin
+clrscr;
+  write('Masukan Golongan A/B:');
+  readln(gol);
+  write('Masukan Pendidikan S1/SLTA:');
+  readln(pend);
+  if(gol = 'A') then
+  begin
+      if pend = 'S1' then
+      begin
+      gaj:=5000000;
+      tunj:=500000;
+      end;
+      if pend = 'SLTA' then
+      begin
+      gaj:=2000000;
+      tunj:=400000;
+      end;
+end
+  else if (gol = 'B')then
+  Begin
+    if pend = 'S1' then
+    begin
+      gaj:=4000000;
+      tunj:=500000;
+      end;
+      if pend = 'SLTA' then
+      begin
+      gaj:=1000000;
+      tunj:=400000;
+      end;
+  end
+  else
+  writeln('Not Found');
+  write('Gaji Anda Adalah: ');
+  writeln(gaj+tunj);
+end.

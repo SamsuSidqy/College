@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class inputkey
+{
+  public static void main(String [] args){
+  //membuat Objek Scanner
+     Scanner bil1 = new Scanner(System.in);
+     int angka;
+     
+     System.out.println("Masukan Bilangan = "); 
+     angka = bil1.nextInt();
+     
+     if(angka % 3 == 0 && angka % 5 == 0){
+        System.out.println("Bilangan Tersebut Dapat Dibagi 3 dan 5"); 
+     }else{
+        System.out.println("Bilangan Tidak Dapat Dibagi 3 dan 5");
+     }
+}
+}

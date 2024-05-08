@@ -1,0 +1,14 @@
+program input_dasar;
+uses crt;
+var 
+ nama : String;
+begin
+ clrscr;
+  write   ('Masukkan Nama Anda: ');
+  Readln (nama);
+  
+  writeln ('_______');
+  writeln ('Nama Saya :  ', nama);
+  
+  readln;
+end.

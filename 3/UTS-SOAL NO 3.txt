@@ -1,0 +1,51 @@
+import java.util.Scanner;
+import java.io.*;
+public class UTS
+{
+  public static void main(String [] args){
+    Scanner masuk=new Scanner (System.in);
+    FileOutputStream out;
+    PrintStream p;
+        System.out.print("Masukan NPM Terakhir : ");
+        int n=masuk.nextInt();
+        int row;
+        if(n % 2 == 0){
+             row = 4;
+        }else{
+             row = 3;
+        }
+        System.out.print("========================================\n");
+        String rs[][] = new String[row][4];
+
+        for(int i= 0; i<row; i++)
+        {
+
+            for(int j=0;j<4;j++)
+            {      
+                if (j == 0)
+                    System.out.print("ID Pasien         :");
+                else if (j == 1){
+                    System.out.print("Nama Pasien       : ");
+                }else if (j == 2){
+                    System.out.print("Kode Kamar        :");
+                }else{
+                    System.out.print("Lama Inap         : ");
+                }
+                System.out.print("");
+                rs[i][j] = masuk.next();
+            }
+        }
+
+        try{            
+            out = new FileOutputStream("C:/Users/Samsu/Desktop/Kuliah/3/Pemrogaman/out.txt");
+            p = new PrintStream(out); 
+            for(int i=0;i<row;i++){           
+                p.println(rs[i][0]+"_"+rs[i][2]+"_"+rs[i][3]+"_"+rs[i][1]);               
+            }
+            p.close();
+        }catch(Exception e){
+            System.err.print(e);
+        }
+        
+  } 
+}

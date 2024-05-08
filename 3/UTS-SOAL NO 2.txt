@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class BMIProgram {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Meminta pengguna untuk memasukkan berat (kg) dan tinggi (m)
+        System.out.print("Masukkan berat (kg): ");
+        double berat = input.nextDouble();
+        System.out.print("Masukkan tinggi (m): ");
+        double tinggi = input.nextDouble();
+
+        // Menghitung BMI
+        double bmi = berat / Math.pow(tinggi, 2);
+
+        // Menentukan kategori BMI
+        String kategori;
+        if (bmi < 18.5) {
+            kategori = "Kurang berat badan";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            kategori = "Normal";
+        } else if (bmi >= 25 && bmi < 29.9) {
+            kategori = "Berlebihan berat badan";
+        } else {
+            kategori = "Obesitas";
+        }
+
+        // Menampilkan hasil
+        System.out.println("BMI Anda: " + bmi);
+        System.out.println("Kategori BMI: " + kategori);
+
+        input.close();
+    }
+}
+

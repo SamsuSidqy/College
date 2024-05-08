@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class inputkey
+{
+  public static void main(String [] args){
+     //membuat Objek Scanner
+     Scanner input = new Scanner(System.in);
+     Scanner input2 = new Scanner(System.in);
+ //menampilkan perintah untuk menginput nama anda
+     System.out.println("Masukan Angka Pertama = ");  
+ //memasukan nama kedalam variabel nama
+     int angka1 = input.nextInt(); //bacaInput = objek scanner
+     System.out.println("Masukan Angka Kedua = "); 
+     int angka2 = input2.nextInt();
+     int hasil;
+     hasil = angka1*angka2;
+
+ //menampilkan nama
+  System.out.println("Jawabannya = "+ hasil); 
+  } 
+}

@@ -1,0 +1,34 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+public class inputkey
+{
+  public static void main(String [] args)throws IOException{
+   //membuat Objek BufferedReader
+     BufferedReader reader = new BufferedReader(new InputStreamReader( System.in));
+     int pertama = 9500;
+     int next = 2500;
+     int harga = 0;
+     
+    System.out.println("Masukan nama anda = ");
+    String nama = reader.readLine();
+    
+    System.out.println("Masukan Jarak Tempuh = ");
+    int jarak = Integer.parseInt(reader.readLine());
+    
+    if(jarak < 4){
+      harga = pertama;
+    }else{
+      harga = pertama + (jarak-4) * next;
+      if(jarak >= 10 || jarak <= 15){
+         harga = harga-2000;
+         System.out.println("Anda Mendapat Potongan Harga 2000");
+      }else{
+         harga = harga-5000;
+         System.out.println("Anda Mendapat Potongan Harga 5000");
+      }
+    }
+    
+      System.out.println("Total Yang Harus Dibayar = " + harga);
+}
+}

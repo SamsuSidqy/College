@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class inputkey
+{
+  public static void main(String [] args){
+     //membuat Objek Scanner
+     Scanner tugas = new Scanner(System.in);
+     Scanner uts = new Scanner(System.in);
+     Scanner uas = new Scanner(System.in);
+ //menampilkan perintah untuk menginput nama anda
+     System.out.println("Masukan Nilai Tugas = ");  
+ //memasukan nama kedalam variabel nama
+     int in1 = tugas.nextInt(); 
+//bacaInput = objek scanner
+ //menampilkan perintah untuk menginput nama anda
+     System.out.println("Masukan Nilai Uts = ");  
+ //memasukan nama kedalam variabel nama
+     int in2 = uts.nextInt(); 
+//bacaInput = objek scanner
+ //menampilkan perintah untuk menginput nama anda
+     System.out.println("Masukan Nilai Uas = ");  
+ //memasukan nama kedalam variabel nama
+     int in3 = uas.nextInt(); 
+//bacaInput = objek scanner
+    double na;
+    char nilei;
+    String ket;
+    na = 0.2*in1 + 0.3*in2 + 0.2*in3;
+    
+    if(na>=91 || na==100){
+    ket = "Lulus";
+    }else
+    if(na>=76 || na==90){
+    ket = "Lulus";    
+    }else
+    if(na>=61 || na==75){    
+    ket = "Lulus";    
+    }else
+    if(na>=41 || na==60){
+    ket = "Tidak Lulus";    
+    }else
+    if(na>=0 || na==40){
+    ket = "Tidak Lulus";    
+    }else{
+    ket = "Tidak Lulus";
+    }
+    System.out.println("Nilai Akhir = " +na );
+    System.out.println("Keterangan = " +ket );
+}
+}

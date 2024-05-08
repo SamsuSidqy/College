@@ -1,0 +1,25 @@
+program Menu;
+uses crt;
+var
+ NomorMenu:Integer;
+begin
+clrscr;
+    //Pilihan Menu
+    writeln('=== Pilihan Menu ===');
+    writeln('1. Baca data');
+    writeln('2. Cetak data');
+    writeln('3. Ubah data');
+    writeln('4. Hapus data');
+    writeln('5. Keluar program');
+    writeln('====================');
+    Write('Pilih Menu 1-5: ');
+    readln(NomorMenu);
+    writeln('====================');
+    case NomorMenu of
+    1:Writeln('Pilihan Anda: Baca Data');
+    2:Writeln('Pilihan Anda: Cetak Data');
+    3:Writeln('Pilihan Anda: Ubah Data');
+    4:Writeln('Pilihan Anda: Hapus Data');
+    5:Writeln('Pilihan Anda: Keluar Program');
+end;
+end.

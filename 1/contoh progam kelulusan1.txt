@@ -1,0 +1,22 @@
+Program If1;
+Uses crt;
+Var
+   nilai:integer;
+   keterangan:string;
+Begin
+clrscr;
+write('masukkan nilai akhir: ');
+readln(nilai);
+
+
+If nilai >90  then
+   
+   keterangan:='Lulus' 
+  
+   
+   else   
+   keterangan :='Tidak Lulus';
+
+ writeln('Keterangan: ',keterangan);
+readln;
+end.

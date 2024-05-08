@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class inputkey
+{
+  public static void main(String [] args){
+  //membuat Objek Scanner
+     Scanner tugas = new Scanner(System.in);
+     Scanner uts = new Scanner(System.in);
+     Scanner uas = new Scanner(System.in);
+     Scanner nama = new Scanner(System.in);
+     Scanner NPM = new Scanner (System.in);
+     
+     System.out.println("Masukan Nama = ");
+     String name = nama.next();
+     
+     System.out.println("Masukan NPM = ");
+     long npm = NPM.nextLong();
+
+     System.out.println("Masukan Nilai Tugas = ");  
+     int in1 = tugas.nextInt(); 
+
+     System.out.println("Masukan Nilai Uts = ");
+     int in2 = uts.nextInt(); 
+     
+     System.out.println("Masukan Nilai Uas = ");  
+     int in3 = uas.nextInt();
+     
+    double na;
+    char nilei;
+    String ket;
+    na = 0.2*in1 + 0.3*in2 + 0.2*in3;
+    
+    if(na>=70){
+    ket = "Lulus";
+    }else{
+    ket = "Tidak Lulus"; 
+    }
+    System.out.println("Nama = "+name);
+    System.out.println("NPM = "+npm);
+    System.out.println("Nilai Akhir = " +na );
+    System.out.println("Keterangan = " +ket );
+}
+}

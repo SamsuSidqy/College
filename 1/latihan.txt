@@ -1,0 +1,28 @@
+Contoh Soal :
+Buatlah sebuah program if nested jika ada sebuah case...
+- Dibutuhkan 1 buah bus Jika Penumpang 30 org
+- jika sudah memenuhi kapasitas 1 bus, Dibutuhkan tambahan 1 bus lg jika peserta lebih dr 10 org.
+
+
+JAWABANNYA:
+
+program bus;
+uses crt;//ethode menyiapkan layar kerja
+  Var // (deklarasi)
+     Jbus,jpeserta:integer;
+
+Begin
+clrscr;
+//(deskripsi)
+     Write ('Masukkan Jumlah Peserta :');
+     Read(jpeserta);
+     If (jpeserta > 30 ) then
+        If (jpeserta mod 30 > 10) then 
+           Jbus := (jpeserta div 30 )+ 1
+         Else
+          Jbus:=jpeserta div 30
+        Else
+          Jbus:=1;
+          write ('Jumlah Bus : ',jbus);
+        readln;
+End.

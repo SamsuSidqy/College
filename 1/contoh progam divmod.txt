@@ -1,0 +1,26 @@
+program operator_divmod;
+uses crt;
+var
+a,b,c,d: Integer;
+begin
+  a:= 7;
+  b:= 2;
+ c:= a mod b;
+ d:= a div b;
+ writeln ('A mod B adalah :',c);
+ writeln ('A div B adalah :',d);
+  
+  readln;
+end.
+
+
+
+= a mod b 
+= 7 mod 2
+= 2 + 2 + 2 = 6 (sisa 1 dr 7) mendekati jgn melewati
+
+
+
+= a div b
+= 7 div 2
+= 7 dibagi 2 = 3.5 pembulatan jadi 3 ( tanpa harus ada angka dblkg koma)

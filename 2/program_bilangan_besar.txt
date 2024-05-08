@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class inputkey
+{
+  public static void main(String [] args){
+  //membuat Objek Scanner
+     Scanner bil1 = new Scanner(System.in);
+     Scanner bil2 = new Scanner(System.in);
+     
+     System.out.println("Masukan Bilangan Pertama = "); 
+     int bilangan1 = bil1.nextInt();
+     
+     System.out.println("Masukan Bilangan Kedua = "); 
+     int bilangan2 = bil2.nextInt();
+     
+     if(bilangan1 > bilangan2){
+     System.out.println(bilangan1);
+     }else{
+     System.out.println(bilangan2);
+     }
+}
+}

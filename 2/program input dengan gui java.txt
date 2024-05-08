@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+public class inputkey
+{
+  public static void main(String [] args){
+  String a1 = JOptionPane.showInputDialog("Angka Pertama :");
+  String a2 = JOptionPane.showInputDialog("Angka Pertama :");
+  
+  int angkaSatu = Integer.parseInt(a1); //konversi String ke int
+  int angkaDua = Integer.parseInt(a2); //konversi String ke int
+  int hasil = angkaSatu + angkaDua;
+  
+  String total = String.valueOf(hasil); // konversi int ke String
+  JOptionPane.showMessageDialog(null,"Hasil Penjumlahan = " + total);
+}
+}

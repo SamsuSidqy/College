@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class inputkey
+{
+  public static void main(String [] args){
+  Scanner bilangan1 = new Scanner(System.in);
+  Scanner bilangan2 = new Scanner(System.in);
+  int hasil;
+  
+  System.out.println("Masukan Bilangan Pertama = ");
+  int bil1 = bilangan1.nextInt();
+  
+  System.out.println("Masukan Bilangan Kedua = ");
+  int bil2 = bilangan2.nextInt();
+  
+  if(bil1 == bil2){
+      hasil = bil1 + bil2;
+  }else{
+      hasil = bil1 * bil2;
+  }
+  System.out.println("Bilangan Pertama = " + bil1);
+  System.out.println("Bilangan Kedua = " + bil2);
+  System.out.println("Output = "+hasil);      
+}
+}

@@ -1,0 +1,66 @@
+Program If1;
+Uses crt;
+Var
+   na : real;
+   tgs, uts, uas:integer;
+   keterangan, nilaihuruf:string;
+Begin
+clrscr;
+
+writeln ('   PROGRAM INPUT NILAI');
+writeln ('_________');
+write('masukkan nilai Tugas: ');
+readln(tgs);
+write('masukkan nilai UTS  : ');
+readln(uts);
+write('masukkan nilai UAS  : ');
+readln(uas);
+na:= (0.2*tgs)+(0.3*uts)+(0.5*uas);
+If ( na >=91) or ( na=100) then
+   begin
+   nilaihuruf :='A';
+   keterangan:='Anda Lulus';
+   end   
+   else 
+
+If ( na >=76) or ( na =90) then
+   begin
+   nilaihuruf :='B';
+   keterangan:='Anda Lulus';
+   end   
+   else 
+  
+If ( na >=61) or ( na =75) then
+   begin
+   nilaihuruf :='C';
+   keterangan:='Anda Lulus';
+   end   
+   else 
+
+If ( na >=41) or ( na =60) then
+   begin
+   nilaihuruf :='D';
+   keterangan:='Anda Tidak Lulus';
+   end   
+   else
+   
+If ( na >=0) or ( na =40) then
+   begin
+   nilaihuruf :='D';
+   keterangan:='Anda Tidak Lulus';
+   end   
+   else 
+   begin  
+   keterangan :='Anda Tidak Lulus';
+   end;
+   
+ writeln ('________');
+ writeln (' Nilai Tugas :',tgs);
+ writeln (' Nilai UTS   :',uts);
+ writeln (' Nilai AS    :',uas);
+ writeln (' Nilai Akhir :',na :2:2);
+ writeln (' Keterangan  :',keterangan); 
+ writeln ('________');
+ 
+readln;
+end.

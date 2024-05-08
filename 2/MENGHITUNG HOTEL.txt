@@ -1,0 +1,35 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+public class inputkey
+{
+  public static void main(String [] args)throws IOException{
+   BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Masukkan Kelas Hotel : ");
+        String nama = reader.readLine();
+        
+        System.out.print("Lama Menginap ");
+        int day = Integer.parseInt(reader.readLine());
+        
+        int harga = 0;
+
+        if (nama.equals("Standar")) {
+          if(day <= 2){
+             harga = day * 400000;
+          }else if(day > 2){
+             harga = day * 35000;  
+          } 
+        } else if(nama.equals("Eksekutif")){
+          if(day <= 2){
+             harga = day * 1200000;
+          }else if(day > 2){
+             harga = day * 1000000;  
+          } 
+        }
+        
+        System.out.println(harga);
+
+} 
+
+}

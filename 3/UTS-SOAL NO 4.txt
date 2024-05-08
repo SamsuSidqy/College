@@ -1,0 +1,63 @@
+import java.util.Scanner;
+import java.io.*;
+public class UTS_PEMROG
+{
+  public static void main(String [] args){
+    try {
+            // Open the file for reading
+            // BufferedReader br = new BufferedReader(new FileReader("C:/Users/Samsu/Desktop/Kuliah/3/Pemrogaman/out.txt"));
+            FileInputStream fstream = new FileInputStream("C:/Users/Samsu/Desktop/Kuliah/3/Pemrogaman/out.txt");
+            DataInputStream data = new DataInputStream(fstream);
+            // Define the 2D string array
+            String[][] rs = new String[3][5];
+
+            // Initialize row and column counters
+            int row = 0;
+            int col = 0;
+
+            String line;
+            while ((line = data.readLine()) != null) {
+                // Split the line by underscore and store the parts in the array
+                String[] parts = line.split("_");
+                for (int i = 0; i < parts.length && col < 5; i++) {
+                    rs[row][col] = parts[i];
+                    col++;
+                }
+                row++; // Move to the next row
+                col = 0; // Reset the column counter to 0 for the next row
+                if (row >= 3) {
+                    break; // If you've filled all rows, exit the loop
+                }
+            }
+
+            // Close the file
+            br.close();
+
+            // Print the contents of the 2D array
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 5; j++) {
+                    if(Integer.parseInt(rs[i][1]) == 1){
+                        rs[i][4] =Integer.toString(Integer.parseInt(rs[i][2]) * 100000);
+                    }else if(Integer.parseInt(rs[i][1]) == 2){
+                        rs[i][4] =Integer.toString(Integer.parseInt(rs[i][2]) * 250000);
+                    }else if(Integer.parseInt(rs[i][1]) == 3){
+                        rs[i][4] =Integer.toString(Integer.parseInt(rs[i][2]) * 500000);
+                    }else{
+                        rs[i][4] =Integer.toString(Integer.parseInt(rs[i][2]) * 0);
+                    }
+                }
+                System.out.println(); // Start a new line for each row
+            }
+            
+            System.out.print("===============================================================\n");
+            System.out.print("ID Pas \t Nama Pasien \t Kode Kamar \t Lama Inap \t Total Biaya\n");
+            System.out.print("===============================================================\n");
+            for (int i = 0; i < 3; i++) {
+                System.out.print(rs[i][0]+"\t "+rs[i][3]+"\t\t "+rs[i][1]+"\t\t"+rs[i][2]+"\t\t"+rs[i][4]);
+                System.out.println();
+            }
+            } catch (IOException e) {
+                System.err.print("Erros");
+            }
+}
+}

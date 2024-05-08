@@ -1,0 +1,24 @@
+program NamaBulan;
+uses crt;
+var
+ AngkaBulan:Integer;
+begin
+clrscr;
+    write('Masukan Angka Bulan 1-12: ');
+    Readln(AngkaBulan);
+    case AngkaBulan of
+    1:Writeln('Januari');
+    2:Writeln('Februari');
+    3:Writeln('Maret');
+    4:Writeln('April');
+    5:Writeln('Mei');
+    6:Writeln('Juni');
+    7:Writeln('Juli');
+    8:Writeln('Agustus');
+    9:Writeln('September');
+    10:Writeln('Oktober');
+    11:Writeln('November');
+    12:Writeln('Desember');
+    else 
+    end;
+end.

@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class UTS
+{
+  public static void main(String [] args){
+    Scanner masuk=new Scanner (System.in);
+        
+        System.out.print("Jumlah Nasabah : ");
+        int n=masuk.nextInt();
+        System.out.print("========================================\n");
+        String bank[][] = new String[n][5];
+
+        for(int i= 0; i<n; i++)
+        {
+
+            for(int j=0;j<3;j++)
+            {      
+                if (j == 0)
+                    System.out.print("No Rekening       :");
+                else if (j == 1)
+                    System.out.print("Nama Nasabah      : ");
+                else
+                    System.out.print("Saldo Awal        : "+"\n");
+                
+                System.out.print("");
+                bank[i][j] = masuk.next();
+            }
+        }
+
+        System.out.print("========================================\n");
+        System.out.print("\t\t BANK XYZ \n");
+        System.out.print("========================================\n");
+        System.out.println("No Rekening \t Nama Nasabah \t  Saldo Awal \t Bunga \t\t Saldo Akhir");
+        
+        for(int i=0;i<n;i++)
+        {
+            if(Integer.parseInt(bank[i][2]) >= 5000000){
+                double bunga = Integer.parseInt(bank[i][2]) * 0.5 / 10;
+                bank[i][3] = Double.toString(bunga);
+                bank[i][4] = Double.toString(Double.valueOf(bank[i][2]) + bunga);
+            }else if(Integer.parseInt(bank[i][2]) >= 3000000){
+                double bunga = Integer.parseInt(bank[i][2]) * 0.3;
+                bank[i][3] = Double.toString(bunga);
+                bank[i][4] = Double.toString(Double.valueOf(bank[i][2]) + bunga);
+            }else if(Integer.parseInt(bank[i][2]) >= 1000000){
+                double bunga = Integer.parseInt(bank[i][2]) * 0.15;
+                bank[i][3] = Double.toString(bunga);
+                bank[i][4] = Double.toString(Double.valueOf(bank[i][2]) + bunga);
+            }else{
+                bank[i][3] = Integer.toString(0);bank[i][4] = Double.toString(Double.valueOf(bank[i][2]) + 0);
+            }
+            
+            
+            System.out.print(bank[i][0]+"\t\t");
+            System.out.print(bank[i][1]+"\t\t");
+            System.out.print(bank[i][2]+"\t\t");
+            System.out.print(bank[i][3]+"\t");
+            System.out.print(bank[i][4]+"\t");
+        System.out.println();
+        }
+  } 
+}
